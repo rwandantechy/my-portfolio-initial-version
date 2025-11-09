@@ -1,0 +1,381 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaBrain, FaCode } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
+import Timeline from '../components/Timeline';
+import SkillsGrid from '../components/SkillsGrid';
+import CertificationCard from '../components/CertificationCard';
+
+export default function About(){
+  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  const experiences = [
+    {
+      title: 'Graduate Research Assistant',
+      company: 'The Catholic University of America',
+      location: 'Washington, DC',
+      date: 'Summer 2025',
+      highlights: [
+        'Designed reproducible computational environments on Raspberry Pi 5 with Docker for AI model inference and system simulation',
+        'Developed theoretical models for compute optimization and remote access',
+        'Deployed multimodal AI models, validating performance against theoretical expectations'
+      ]
+    },
+    {
+      title: 'Website Manager & Technical Support Specialist',
+      company: 'Nkotanyi Driving School',
+      location: 'Kigali, Rwanda',
+      date: 'May 2024 – Dec 2024',
+      highlights: [
+        'Provided tier-1 and tier-2 technical support, maintaining 95% client satisfaction',
+        'Reduced downtime by 20% through proactive VPS server optimizations and architecture improvements',
+        'Implemented weekly monitoring, updates, and firewall rules to enhance platform resilience'
+      ]
+    },
+    {
+      title: 'Web Developer Intern',
+      company: 'Nishkaam Innovations LLP',
+      location: 'Rajkot, Gujarat, India',
+      date: 'Dec 2023 – May 2024',
+      highlights: [
+        'Developed modular Node.js tools to support inter-departmental communications, reducing response times by 70%',
+        'Created a task-tracking system using Express and MongoDB, improving internal reporting clarity',
+        'Participated in Agile scrums, sprint planning, and Git version control workflows'
+      ]
+    },
+    {
+      title: 'Summer Staff – Kane Fitness Center',
+      company: 'The Catholic University of America',
+      location: 'Washington, DC',
+      date: 'Summer 2025',
+      highlights: [
+        'Ensured safe operations through routine facility inspections and protocol adherence',
+        'Provided front desk customer service, managing daily operations and visitor inquiries',
+        'Fostered a welcoming, team-oriented environment'
+      ]
+    }
+  ];
+
+  const quickStats = [
+    { icon: <FaGraduationCap />, value: '2', label: 'Degrees' },
+    { icon: <FaCode />, value: '10+', label: 'Projects' },
+    { icon: <FaAward />, value: '5+', label: 'Certifications' },
+    { icon: <FaBrain />, value: '3+', label: 'Years Experience' }
+  ];
+
+  return (
+    <section className="about-page">
+      {/* Hero Section */}
+      <motion.div 
+        ref={heroRef}
+        className="about-hero"
+        initial={{ opacity: 0, y: 30 }}
+        animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="container">
+          <div className="about-hero-content">
+            <motion.div 
+              className="about-avatar-wrapper"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="about-avatar">
+                <span className="avatar-emoji">👨‍💻</span>
+              </div>
+              <motion.div 
+                className="avatar-status"
+                initial={{ opacity: 0, x: -20 }}
+                animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <span className="status-dot"></span>
+                Open to opportunities
+              </motion.div>
+            </motion.div>
+
+            <motion.div 
+              className="about-hero-text"
+              initial={{ opacity: 0, x: 30 }}
+              animate={heroInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h1 className="about-title">
+                Hi, I'm <span className="gradient-text">Innocent Niyonzima</span>
+              </h1>
+              <p className="about-subtitle">
+                Computer Science Graduate Student | Theory of Computation Researcher | Full-Stack Developer
+              </p>
+              <p className="about-description">
+                Passionate about algorithmic theory, computational complexity, and building scalable systems that solve real-world problems. 
+                Currently pursuing my Master's at Catholic University of America while contributing to cutting-edge research in Theory of Computation.
+              </p>
+
+              <div className="about-contact-links">
+                <motion.a 
+                  href="mailto:niyonzima@cua.edu" 
+                  className="contact-chip"
+                  whileHover={{ y: -4, scale: 1.05 }}
+                >
+                  <FaEnvelope />
+                  niyonzima@cua.edu
+                </motion.a>
+                <motion.a 
+                  href="tel:+14106227477" 
+                  className="contact-chip"
+                  whileHover={{ y: -4, scale: 1.05 }}
+                >
+                  <FaPhone />
+                  +1 (410) 622-7477
+                </motion.a>
+                <motion.a 
+                  href="https://linktr.ee/Innocent.niyonzima" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="contact-chip"
+                  whileHover={{ y: -4, scale: 1.05 }}
+                >
+                  <FaGlobe />
+                  linktr.ee
+                </motion.a>
+              </div>
+
+              <div className="about-social-links">
+                <motion.a 
+                  href="https://linkedin.com/in/innocent-niyonzima" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link-btn"
+                  whileHover={{ y: -4 }}
+                >
+                  <FaLinkedin />
+                </motion.a>
+                <motion.a 
+                  href="https://github.com/rwandantechy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link-btn"
+                  whileHover={{ y: -4 }}
+                >
+                  <FaGithub />
+                </motion.a>
+                <motion.a 
+                  href="https://linktr.ee/Innocent.niyonzima" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link-btn"
+                  whileHover={{ y: -4 }}
+                >
+                  <FaMapMarkerAlt />
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Quick Stats */}
+      <div className="container">
+        <motion.div 
+          ref={statsRef}
+          className="about-stats-grid"
+          initial={{ opacity: 0, y: 30 }}
+          animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+        >
+          {quickStats.map((stat, idx) => (
+            <motion.div 
+              key={idx}
+              className="about-stat-card"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={statsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={{ y: -8, scale: 1.05 }}
+            >
+              <div className="stat-icon-large">{stat.icon}</div>
+              <div className="stat-value-xl gradient-text">{stat.value}</div>
+              <div className="stat-label-xl">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Main Content */}
+      <div className="container about-content">
+        {/* Education */}
+        <motion.div 
+          className="card about-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="section-header">
+            <FaGraduationCap className="section-icon" />
+            <h3>Education</h3>
+          </div>
+          <div className="education-grid">
+            <motion.div 
+              className="education-item"
+              whileHover={{ x: 8 }}
+            >
+              <div className="education-icon">🎓</div>
+              <div className="education-content">
+                <h4>Master of Science – Computer Science</h4>
+                <p className="education-school">The Catholic University of America</p>
+                <p className="education-location">Washington, DC</p>
+                <span className="education-date">May 2026</span>
+              </div>
+            </motion.div>
+            <motion.div 
+              className="education-item"
+              whileHover={{ x: 8 }}
+            >
+              <div className="education-icon">🎓</div>
+              <div className="education-content">
+                <h4>Bachelor of Technology – Computer Engineering</h4>
+                <p className="education-school">Marwadi University</p>
+                <p className="education-location">Rajkot, Gujarat, India</p>
+                <span className="education-date">April 2024</span>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Technical Skills */}
+        <motion.div 
+          className="card about-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="section-header">
+            <FaCode className="section-icon" />
+            <h3>Technical Skills</h3>
+          </div>
+          <SkillsGrid />
+        </motion.div>
+
+        {/* Experience */}
+        <motion.div 
+          className="card about-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="section-header">
+            <FaBrain className="section-icon" />
+            <h3>Research & Experience</h3>
+          </div>
+          <Timeline items={experiences} />
+        </motion.div>
+
+        {/* Certifications */}
+        <motion.div 
+          className="card about-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="section-header">
+            <FaAward className="section-icon" />
+            <h3>Certifications & Professional Development</h3>
+          </div>
+          <div className="certifications-grid">
+            <CertificationCard
+              iconType="graduation"
+              title="Back-End Web Development"
+              issuer="ALX Africa"
+              date="Jan 2025 – Present"
+              status="ongoing"
+              index={0}
+            />
+            <CertificationCard
+              iconType="trophy"
+              title="Aspire Leaders Program"
+              issuer="Aspire Institute (Harvard Business School-founded)"
+              date="Jan – Apr 2024"
+              status="completed"
+              index={1}
+            />
+            <CertificationCard
+              iconType="briefcase"
+              title="Andela Technical Leadership"
+              issuer="Andela Rwanda"
+              date="Jan – Mar 2023"
+              status="completed"
+              index={2}
+            />
+            <CertificationCard
+              iconType="database"
+              title="Database Programming with SQL"
+              issuer="Oracle Academy"
+              date="2022"
+              status="completed"
+              index={3}
+            />
+            <CertificationCard
+              iconType="bolt"
+              title="Web Development 101: JavaScript"
+              issuer="Pupilfirst - ELITE Program India"
+              date="Sep 2022 – Jan 2023"
+              status="completed"
+              index={4}
+            />
+          </div>
+        </motion.div>
+
+        {/* Additional Info Grid */}
+        <div className="about-info-grid">
+          <motion.div 
+            className="card about-section"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="section-header">
+              <FaBrain className="section-icon" />
+              <h4>Research Interests</h4>
+            </div>
+            <div className="interest-tags">
+              <span className="interest-tag">Theory of Computation</span>
+              <span className="interest-tag">Automata Theory</span>
+              <span className="interest-tag">Formal Methods</span>
+              <span className="interest-tag">Computational Complexity</span>
+              <span className="interest-tag">Algorithm Design</span>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="card about-section"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <div className="section-header">
+              <FaGlobe className="section-icon" />
+              <h4>Languages</h4>
+            </div>
+            <div className="languages-list">
+              <div className="language-item">
+                <span className="language-name">English</span>
+                <span className="language-level">Fluent</span>
+              </div>
+              <div className="language-item">
+                <span className="language-name">Kinyarwanda</span>
+                <span className="language-level">Native</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
