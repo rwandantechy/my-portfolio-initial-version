@@ -48,9 +48,8 @@ export default function Navbar(){
               whileTap={{ scale: 0.95 }}
             >
               <span className="logo-text">
-                <span className="gradient-text" style={{ fontSize: '1.4rem', fontWeight: '900' }}>TECHYIE</span>
+                <span className="gradient-text" style={{ fontSize: '1.4rem', fontWeight: '900' }}>Rwandantechy</span>
               </span>
-              <span className="logo-subtitle" style={{ fontSize: '0.7rem', fontWeight: '600' }}>by Innocent</span>
             </motion.div>
           </Link>
 
