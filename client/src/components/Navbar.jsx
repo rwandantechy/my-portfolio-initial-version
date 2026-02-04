@@ -72,13 +72,6 @@ export default function Navbar(){
                   >
                     {link.label}
                   </motion.span>
-                  {location.pathname === link.to && (
-                    <motion.div 
-                      className="active-indicator"
-                      layoutId="activeIndicator"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
                 </Link>
               </motion.li>
             ))}
@@ -192,12 +185,6 @@ export default function Navbar(){
                       className={`mobile-menu-link ${location.pathname === link.to ? 'active' : ''}`}
                     >
                       <span className="mobile-link-text">{link.label}</span>
-                      {location.pathname === link.to && (
-                        <motion.div 
-                          className="mobile-active-dot"
-                          layoutId="mobileActiveDot"
-                        />
-                      )}
                     </Link>
                   </motion.li>
                 ))}

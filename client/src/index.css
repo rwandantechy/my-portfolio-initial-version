@@ -942,15 +942,13 @@ textarea {
   color: #000;
 }
 
-.active-indicator {
-  position: absolute;
-  bottom: -2px;
-  left: 1.25rem;
-  right: 1.25rem;
-  height: 3px;
-  background: var(--gradient-primary);
+.navbar-link-premium.active {
+  background: rgba(253, 150, 26, 0.1);
   border-radius: var(--radius-full);
-  box-shadow: 0 0 12px rgba(253, 150, 26, 0.6);
+}
+
+[data-theme="light"] .navbar-link-premium.active {
+  background: rgba(253, 150, 26, 0.08);
 }
 
 /* Actions */
@@ -1124,14 +1122,6 @@ textarea {
 
 .mobile-link-text {
   flex: 1;
-}
-
-.mobile-active-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--color-primary);
 }
 
 .mobile-menu-footer {
