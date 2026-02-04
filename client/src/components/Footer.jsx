@@ -27,8 +27,8 @@ export default function Footer(){
           <div className="footer-section">
             <h3 className="gradient-text">Innocent N.</h3>
             <p className="footer-description">
-              MS Computer Science candidate specializing in Theory of Computation 
-              and building scalable full-stack applications.
+              Full-Stack Developer specializing in MERN and .NET Core technologies.
+              Building scalable applications with technical excellence.
             </p>
           </div>
 

@@ -31,7 +31,7 @@ export default function Contact(){
       >
         <h2>Get In Touch</h2>
         <p className="muted" style={{ fontSize: '1.1rem', maxWidth: 600, margin: '16px auto 0' }}>
-          Open to PhD opportunities, research collaborations, and challenging full-stack projects
+          Open to full-stack development roles, backend engineering positions, and technical leadership opportunities
         </p>
       </motion.div>
 

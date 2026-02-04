@@ -42,9 +42,9 @@ export default function Blogs(){
         transition={{ duration: 0.5 }}
         style={{ textAlign: 'center', marginBottom: 48 }}
       >
-        <h2>Blog & Research</h2>
+        <h2>Blog & Insights</h2>
         <p className="muted" style={{ fontSize: '1.1rem', maxWidth: 700, margin: '16px auto 0' }}>
-          Exploring theory of computation, algorithms, and modern web development
+          Sharing insights on full-stack development, best practices, and technical innovations
         </p>
       </motion.div>
 
@@ -97,8 +97,8 @@ export default function Blogs(){
         transition={{ delay: 0.8 }}
       >
         <p className="muted">
-          📝 More articles coming soon! Stay tuned for deep dives into theory of computation, 
-          algorithm design, and full-stack development best practices.
+          📝 More articles coming soon! Stay tuned for deep dives into full-stack development,
+          system design, and best practices in modern web technologies.
         </p>
       </motion.div>
     </section>

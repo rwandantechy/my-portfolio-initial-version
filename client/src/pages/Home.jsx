@@ -25,10 +25,10 @@ export default function Home(){
             transition={{ duration: 0.5, delay: 0 }}
             whileHover={{ y: -12, transition: { duration: 0.3 } }}
           >
-            <FaBrain className="highlight-icon" style={{ fontSize: '3.5rem', color: 'var(--color-primary)' }} />
-            <h3>Research Focus</h3>
+            <FaLaptopCode className="highlight-icon" style={{ fontSize: '3.5rem', color: 'var(--color-primary)' }} />
+            <h3>Technical Expertise</h3>
             <p className="muted">
-              Specializing in Theory of Computation, Automata Theory, and Computational Complexity
+              Specializing in MERN, .NET Core, and modern web technologies
             </p>
           </motion.div>
           
@@ -122,7 +122,7 @@ export default function Home(){
           <div className="cta-content">
             <h2 className="gradient-text">Let's Build Something Amazing Together</h2>
             <p className="muted" style={{fontSize:'1.1rem',marginBottom:32}}>
-              Open to PhD opportunities, research collaborations, and challenging full-stack projects
+              Open to full-stack development roles, backend engineering positions, and technical leadership opportunities
             </p>
             <div style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap'}}>
               <Link to="/contact" className="btn">Get In Touch</Link>

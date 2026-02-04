@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaBrain, FaCode } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaLaptopCode, FaCode } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import Timeline from '../components/Timeline';
 import SkillsGrid from '../components/SkillsGrid';
@@ -106,11 +106,11 @@ export default function About(){
                 Hi, I'm <span className="gradient-text">Innocent Niyonzima</span>
               </h1>
               <p className="about-subtitle">
-                Computer Science Graduate Student | Theory of Computation Researcher | Full-Stack Developer
+                Full-Stack Developer | Backend Engineer | Tech Innovator
               </p>
               <p className="about-description">
-                Passionate about algorithmic theory, computational complexity, and building scalable systems that solve real-world problems. 
-                Currently pursuing my Master's at Catholic University of America while contributing to cutting-edge research in Theory of Computation.
+                Passionate about building scalable applications and solving complex technical challenges with modern technologies.
+                Specialized in MERN stack, .NET Core, and cloud infrastructure. Always eager to learn and tackle new technical problems.
               </p>
 
               <div className="about-contact-links">
@@ -340,15 +340,15 @@ export default function About(){
             transition={{ duration: 0.6 }}
           >
             <div className="section-header">
-              <FaBrain className="section-icon" />
-              <h4>Research Interests</h4>
+              <FaLaptopCode className="section-icon" />
+              <h4>Technical Interests</h4>
             </div>
             <div className="interest-tags">
-              <span className="interest-tag">Theory of Computation</span>
-              <span className="interest-tag">Automata Theory</span>
-              <span className="interest-tag">Formal Methods</span>
-              <span className="interest-tag">Computational Complexity</span>
-              <span className="interest-tag">Algorithm Design</span>
+              <span className="interest-tag">Full-Stack Development</span>
+              <span className="interest-tag">Backend Engineering</span>
+              <span className="interest-tag">System Design</span>
+              <span className="interest-tag">Cloud Technologies</span>
+              <span className="interest-tag">Database Optimization</span>
             </div>
           </motion.div>
 

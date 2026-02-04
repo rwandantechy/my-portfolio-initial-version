@@ -13,8 +13,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <FaGraduationCap style={{ marginRight: 8 }} />
-          Available for PhD opportunities in Theory of Computation
+          <FaCode style={{ marginRight: 8 }} />
+          Available for Full-Stack & Backend Development Roles
         </motion.div>
         
         <motion.h1 
@@ -32,8 +32,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          MS Computer Science candidate specializing in algorithmic theory and computational complexity. 
-          Full-stack developer building scalable systems with proven impact.
+          Full-stack developer specializing in MERN and .NET Core. 
+          Building scalable systems with proven impact and technical excellence.
         </motion.p>
         
         <motion.div 
