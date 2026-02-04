@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaLaptopCode, FaCode } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaLaptopCode, FaCode, FaBrain } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import Timeline from '../components/Timeline';
 import SkillsGrid from '../components/SkillsGrid';

@@ -11,6 +11,15 @@
   --color-secondary: #00d4ff;
   --color-accent: #ff4d6d;
   
+  /* RGB values for colors (for rgba) */
+  --color-primary-rgb: 253, 150, 26;
+  --color-secondary-rgb: 0, 212, 255;
+  --color-accent-rgb: 255, 77, 109;
+  --accent-primary-rgb: 253, 150, 26;
+  --accent-secondary-rgb: 0, 212, 255;
+  --success-rgb: 34, 197, 94;
+  --success: #22c55e;
+  
   /* Dark Theme with Depth */
   --color-bg: #0a0a0a;
   --color-surface: #111111;
@@ -1646,6 +1655,12 @@ section {
   overflow: hidden;
 }
 
+.highlight-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 32px rgba(253, 150, 26, 0.15);
+  transform: translateY(-6px);
+}
+
 .highlight-card::before {
   content: '';
   position: absolute;
@@ -1689,6 +1704,15 @@ section {
   padding: 2rem;
   text-align: center;
   transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featured-project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px rgba(253, 150, 26, 0.15);
 }
 
 .featured-project-emoji {
@@ -1699,7 +1723,15 @@ section {
 .featured-project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+  margin-top: 0;
   color: var(--color-text);
+}
+
+.featured-project-card p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .featured-metrics {
@@ -2742,6 +2774,17 @@ section {
 
 @keyframes avatarRotate {
   to { transform: rotate(360deg); }
+}
+
+.avatar-initials {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fd961a 0%, #ff6b2c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
 }
 
 .avatar-emoji {
