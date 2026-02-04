@@ -83,7 +83,7 @@ export default function About(){
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="about-avatar">
-                <span className="avatar-emoji">👨‍💻</span>
+                <span className="avatar-initials">IN</span>
               </div>
               <motion.div 
                 className="avatar-status"

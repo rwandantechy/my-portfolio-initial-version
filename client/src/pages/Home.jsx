@@ -84,7 +84,6 @@ export default function Home(){
               transition={{ duration: 0.5, delay: idx * 0.15 }}
               whileHover={{ y: -12, transition: { duration: 0.3 } }}
             >
-              <div className="featured-project-emoji">{project.emoji}</div>
               <h3>{project.title}</h3>
               <p className="muted">{project.description}</p>
               
@@ -98,18 +97,6 @@ export default function Home(){
                     <span className="metric-value gradient-text">{metric.value}</span>
                     <span className="metric-label muted">{metric.label}</span>
                   </motion.div>
-                ))}
-              </div>
-              
-              <div className="featured-tech-stack">
-                {project.tech.slice(0, 4).map((tech, idx) => (
-                  <motion.span 
-                    key={idx} 
-                    className="tech-badge-small"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                  >
-                    {tech}
-                  </motion.span>
                 ))}
               </div>
             </motion.div>

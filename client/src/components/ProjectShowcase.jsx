@@ -18,9 +18,6 @@ export default function ProjectShowcase({ project, index }) {
       {/* Project Header */}
       <div className="project-showcase-header">
         <div className="project-header-content">
-          <div className="project-emoji-wrapper">
-            <span className="project-emoji-large">{project.emoji || '🚀'}</span>
-          </div>
           <div className="project-title-content">
             <h3 className="project-title">{project.title}</h3>
             {project.featured && (
@@ -51,7 +48,6 @@ export default function ProjectShowcase({ project, index }) {
               transition={{ delay: 0.2 + idx * 0.1 }}
               whileHover={{ y: -4, scale: 1.05 }}
             >
-              <span className="metric-icon-large">{metric.icon}</span>
               <div className="metric-content">
                 <span className="metric-value-large gradient-text">{metric.value}</span>
                 <span className="metric-label-large">{metric.label}</span>

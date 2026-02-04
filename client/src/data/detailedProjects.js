@@ -2,13 +2,12 @@ export const detailedProjects = [
   {
     id: 1,
     title: 'Ibyapa.com - Exam Preparation Platform',
-    emoji: '📚',
     description: 'A comprehensive MERN stack platform for A-Level exam preparation with 40,000+ active users across Rwanda.',
     featured: true,
     metrics: [
-      { icon: '👥', value: '40K+', label: 'Active Users' },
-      { icon: '📈', value: '+25%', label: 'Pass Rate' },
-      { icon: '⏱️', value: '200ms', label: 'Avg Response' }
+      { value: '40K+', label: 'Active Users' },
+      { value: '+25%', label: 'Pass Rate' },
+      { value: '200ms', label: 'Avg Response' }
     ],
     tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redis', 'AWS'],
     challenges: [
@@ -37,34 +36,33 @@ export const detailedProjects = [
   },
   {
     id: 2,
-    title: 'Containerized AI Inference Server',
-    emoji: '🤖',
-    description: 'Raspberry Pi 5-based Docker environment for deploying multimodal AI models with remote access capabilities.',
+    title: 'Containerized Infrastructure on Edge Devices',
+    description: 'Raspberry Pi 5-based Docker environment for deploying multimodal models with remote access capabilities.',
     featured: true,
     metrics: [
-      { icon: '🚀', value: '3x', label: 'Faster Deploy' },
-      { icon: '🔒', value: '100%', label: 'Secure VPN' },
-      { icon: '⚡', value: '50ms', label: 'Inference Time' }
+      { value: '3x', label: 'Faster Deploy' },
+      { value: '100%', label: 'Secure VPN' },
+      { value: '50ms', label: 'Inference Time' }
     ],
     tech: ['Docker', 'Python', 'FastAPI', 'TensorFlow', 'Raspberry Pi', 'WireGuard VPN'],
     challenges: [
       'Limited computational resources on Raspberry Pi hardware',
       'Secure remote access without exposing services publicly',
-      'Managing multiple AI model versions efficiently',
+      'Managing multiple model versions efficiently',
       'Ensuring reproducible environments across deployments'
     ],
     solutions: [
       'Created optimized Docker containers with multi-stage builds',
       'Implemented WireGuard VPN for secure remote access',
       'Used Docker Compose for orchestrating multiple services',
-      'Built automated CI/CD pipeline for model deployment',
+      'Built automated CI/CD pipeline for deployment',
       'Implemented model versioning with Docker tags'
     ],
     results: [
       'Reduced deployment time from 45 minutes to 15 minutes',
       'Achieved 50ms average inference time for common models',
       'Zero security breaches with VPN-only access',
-      'Successfully deployed and tested 12+ AI models'
+      'Successfully deployed and tested 12+ models'
     ],
     links: {
       github: null // Research project
@@ -73,13 +71,12 @@ export const detailedProjects = [
   {
     id: 3,
     title: 'Budget Planner Web Application',
-    emoji: '💰',
     description: 'Full-stack financial management tool built with .NET Core and SQL Server for personal budget tracking.',
     featured: false,
     metrics: [
-      { icon: '📊', value: '100%', label: 'Data Accuracy' },
-      { icon: '🎯', value: '5+', label: 'Features' },
-      { icon: '⚡', value: 'Real-time', label: 'Updates' }
+      { value: '100%', label: 'Data Accuracy' },
+      { value: '5+', label: 'Features' },
+      { value: 'Real-time', label: 'Updates' }
     ],
     tech: ['.NET Core', 'C#', 'SQL Server', 'Entity Framework', 'Bootstrap', 'Chart.js'],
     challenges: [
@@ -105,13 +102,12 @@ export const detailedProjects = [
   {
     id: 4,
     title: 'Nkotanyi Driving School Platform',
-    emoji: '🚗',
     description: 'Complete web platform for driving school management with 95% client satisfaction and 20% reduced downtime.',
     featured: true,
     metrics: [
-      { icon: '⭐', value: '95%', label: 'Satisfaction' },
-      { icon: '📉', value: '-20%', label: 'Downtime' },
-      { icon: '🔧', value: '24/7', label: 'Support' }
+      { value: '95%', label: 'Satisfaction' },
+      { value: '-20%', label: 'Downtime' },
+      { value: '24/7', label: 'Support' }
     ],
     tech: ['PHP', 'Laravel', 'MySQL', 'Vue.js', 'NGINX', 'VPS'],
     challenges: [
@@ -140,13 +136,12 @@ export const detailedProjects = [
   {
     id: 5,
     title: 'YIGSE NGO Website',
-    emoji: '🌍',
     description: 'Professional website for Youth Initiative for Global Sustainability and Empowerment NGO.',
     featured: false,
     metrics: [
-      { icon: '🎨', value: 'Modern', label: 'Design' },
-      { icon: '📱', value: '100%', label: 'Responsive' },
-      { icon: '⚡', value: '<1s', label: 'Load Time' }
+      { value: 'Modern', label: 'Design' },
+      { value: '100%', label: 'Responsive' },
+      { value: '<1s', label: 'Load Time' }
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Netlify'],
     challenges: [
@@ -172,13 +167,12 @@ export const detailedProjects = [
   {
     id: 6,
     title: 'Task Tracking System',
-    emoji: '✅',
     description: 'Internal task management system built with Node.js and MongoDB, improving team efficiency by 70%.',
     featured: false,
     metrics: [
-      { icon: '⚡', value: '70%', label: 'Faster Response' },
-      { icon: '📊', value: 'Real-time', label: 'Analytics' },
-      { icon: '👥', value: '15+', label: 'Team Users' }
+      { value: '70%', label: 'Faster Response' },
+      { value: 'Real-time', label: 'Analytics' },
+      { value: '15+', label: 'Team Users' }
     ],
     tech: ['Node.js', 'Express', 'MongoDB', 'React', 'Socket.io', 'JWT'],
     challenges: [
