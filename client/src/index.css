@@ -504,6 +504,7 @@ nav a.active {
   margin-bottom: 2.5rem;
   position: relative;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -644,6 +645,7 @@ nav a.active {
   background: rgba(253, 150, 26, 0.12);
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   position: relative;
   z-index: 1;
@@ -673,6 +675,7 @@ nav a.active {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(253, 150, 26, 0.2);
   border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(10px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
@@ -1283,6 +1286,8 @@ textarea {
 [data-theme="light"] .mobile-menu-toggle-premium:hover {
   background: rgba(253, 150, 26, 0.08);
 }
+
+.mobile-menu-toggle-premium:hover {
   color: var(--color-primary);
   background: rgba(255, 255, 255, 0.12);
 }

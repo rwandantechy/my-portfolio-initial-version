@@ -81,7 +81,7 @@ export default function Footer(){
 
         <div className="footer-bottom">
           <p className="muted">
-            &copy; {new Date().getFullYear()} Innocent Niyonzima. Built with <FaHeart className="heart-icon" /> using React + Vite
+            &copy; {new Date().getFullYear()} Rwandantechy. 
           </p>
         </div>
       </div>
