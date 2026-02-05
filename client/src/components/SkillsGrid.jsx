@@ -11,6 +11,7 @@ const logoMap = {
   'C': 'c',
   'C++': 'cplusplus',
   'PHP': 'php',
+  'Java': 'java',
   'React': 'react',
   'HTML5': 'html5',
   'CSS3': 'css3',
@@ -84,7 +85,7 @@ export default function SkillsGrid() {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['C#', 'Python', 'JavaScript', 'TypeScript', 'C', 'C++', 'PHP']
+      skills: ['C#', 'Python', 'JavaScript', 'TypeScript', 'C', 'C++', 'PHP', 'Java']
     },
     {
       title: 'Frontend',
