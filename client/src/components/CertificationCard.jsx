@@ -26,17 +26,18 @@ const langIconMap = {
   'Node': 'nodedotjs'
 };
 
-// Simple Icons CDN mapping for issuers/companies
-const issuerIconMap = {
-  'ALX Africa': 'alxafrica',
-  'Kaggle': 'kaggle',
-  'Udemy': 'udemy',
-  'Oracle Academy': 'oracle',
-  'Cisco Networking Academy': 'cisco',
-  'LinkedIn Learning': 'linkedin',
-  'Marwadi University': 'google', // fallback to generic
-  'Harvard': 'harvard',
-  'Andela': 'andela'
+// Official company logo URLs
+const officialIssuerLogoMap = {
+  'Oracle Academy': 'https://techsassygirlz.org/home/oracle-academy-logo1-800x343/',
+  'Kaggle': 'https://www.kaggle.com/static/images/site-logo.png',
+  'Sololearn': 'https://www.sololearn.com/images/logo.svg',
+  'Cisco': 'https://www.cisco.com/favicon.ico',
+  'LinkedIn Learning': 'https://www.linkedin.com/favicon.ico',
+  'ALX Africa': 'https://www.alxafrica.com/favicon.ico',
+  'Pupilfirst': 'https://www.pupilfirst.com/favicon.ico',
+  'University of Colorado': 'https://www.colorado.edu/favicon.ico',
+  'Marwadi University': 'https://www.marwadiuniversity.ac.in/favicon.ico',
+  'Nishkaam Innovations LLP': 'https://nishkaamllp.com/favicon.ico'
 };
 
 export default function CertificationCard({ title, issuer, date, iconType, status, certificateUrl, index }) {
@@ -56,9 +57,9 @@ export default function CertificationCard({ title, issuer, date, iconType, statu
   
   // Get issuer/company logo
   const getIssuerIcon = () => {
-    for (const [issuerName, icon] of Object.entries(issuerIconMap)) {
+    for (const [issuerName, logoUrl] of Object.entries(officialIssuerLogoMap)) {
       if (issuer.includes(issuerName)) {
-        return `https://cdn.simpleicons.org/${icon}/fd961a`;
+        return logoUrl;
       }
     }
     return null;
