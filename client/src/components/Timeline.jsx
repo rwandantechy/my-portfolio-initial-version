@@ -70,9 +70,10 @@ export default function Timeline({ items }) {
                 marginBottom: 12,
                 borderRadius: 6,
                 objectFit: 'contain',
-                padding: 4,
+                padding: 3,
                 backgroundColor: 'var(--color-card)',
-                border: '2px solid var(--color-primary)'
+                border: '2px solid var(--color-primary)',
+                opacity: 0.95
               }}
               onError={(e) => {
                 // Fallback if logo fails to load
