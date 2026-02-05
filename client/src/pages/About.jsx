@@ -300,21 +300,12 @@ export default function About(){
           <div className="certifications-grid">
             <CertificationCard
               iconType="graduation"
-              title="Back-End Web Development"
-              issuer="ALX Africa"
-              date="Jan 2025 – Present"
-              status="ongoing"
-              certificateUrl="/certificates/Certificate of participation.png"
-              index={0}
-            />
-            <CertificationCard
-              iconType="graduation"
               title="Intermediate Machine Learning"
               issuer="Kaggle"
               date="2024"
               status="completed"
               certificateUrl="/certificates/Innocent Niyonzima - Intermediate Machine Learning.png"
-              index={1}
+              index={0}
             />
             <CertificationCard
               iconType="graduation"
@@ -323,7 +314,7 @@ export default function About(){
               date="2024"
               status="completed"
               certificateUrl="/certificates/Innocent Niyonzima  - Intro to Machine Learning.png"
-              index={2}
+              index={1}
             />
             <CertificationCard
               iconType="graduation"
@@ -332,7 +323,7 @@ export default function About(){
               date="2024"
               status="completed"
               certificateUrl="/certificates/CertificateOfCompletion_Building Modern Projects with React.pdf"
-              index={3}
+              index={2}
             />
             <CertificationCard
               iconType="database"
@@ -341,7 +332,7 @@ export default function About(){
               date="2024"
               status="completed"
               certificateUrl="/certificates/Database Programming with SQl.pdf"
-              index={4}
+              index={3}
             />
             <CertificationCard
               iconType="bolt"
@@ -350,7 +341,7 @@ export default function About(){
               date="2024"
               status="completed"
               certificateUrl="/certificates/Programming with SQL.pdf"
-              index={5}
+              index={4}
             />
             <CertificationCard
               iconType="database"
@@ -359,6 +350,15 @@ export default function About(){
               date="2023"
               status="completed"
               certificateUrl="/certificates/SQL _ORACLE.pdf"
+              index={5}
+            />
+            <CertificationCard
+              iconType="bolt"
+              title="PHP Web Development"
+              issuer="Web Development Course"
+              date="2023"
+              status="completed"
+              certificateUrl="/certificates/php.pdf"
               index={6}
             />
             <CertificationCard
@@ -387,24 +387,6 @@ export default function About(){
               status="completed"
               certificateUrl="/certificates/Introduction to Networks.pdf"
               index={9}
-            />
-            <CertificationCard
-              iconType="briefcase"
-              title="Professional Foundations"
-              issuer="LinkedIn Learning"
-              date="2023"
-              status="completed"
-              certificateUrl="/certificates/professional-foundations-certificate-innocent-niyonzima.png"
-              index={10}
-            />
-            <CertificationCard
-              iconType="briefcase"
-              title="Internship Certificate"
-              issuer="Marwadi University"
-              date="2023-2024"
-              status="completed"
-              certificateUrl="/certificates/MU_CE_2023-24_009_INTERNSHIP CERTIFICATE_92000103159.pdf"
-              index={11}
             />
           </div>
         </motion.div>
