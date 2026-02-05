@@ -104,8 +104,8 @@ export default function SkillsGrid() {
       skills: ['Docker', 'Git', 'CI/CD', 'VPS', 'NGINX', 'PM2', 'Linux']
     },
     {
-      title: 'Theory & Algorithms',
-      skills: ['Automata Theory', 'Data Structures', 'Algorithms', 'OOP', 'Design Patterns']
+      title: 'Core Concepts',
+      skills: ['Data Structures & Algorithms', 'OOP', 'SDLC', 'System Design', 'Debugging', 'MVC', 'Ethical AI', 'AI Policy Implications']
     }
   ];
 
