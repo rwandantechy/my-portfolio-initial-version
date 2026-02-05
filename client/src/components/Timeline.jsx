@@ -2,9 +2,11 @@ import React from 'react';
 
 // Official company and university logos from their websites
 const companyLogoMap = {
-  'The Catholic University of America': 'https://www.cua.edu/assets/images/cua-logo-only.png',
-  'Nkotanyi Driving School': 'https://www.linkedin.com/company/nkotanyi-driving-school/logo',
-  'Nishkaam Innovations LLP': 'https://www.linkedin.com/company/nishkaam-innovations/logo'
+  'The Catholic University of America': 'https://legacywww.catholic.edu/assets/images/CUA-Logo-Large.png',
+  'Nkotanyi Driving School': 'https://ibyapa.com/images/logo.jpg',
+  'Nishkaam Innovations LLP': 'https://nishkaamllp.com/assets/logo.png',
+  'Marwadi University': 'https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/logomain.svg',
+  'Andela': 'https://cdn.prod.website-files.com/660dcc7f45ad8881324199b5/66267ca5100e5bf7643aa0d6_andela_logo.svg'
 };
 
 const getCompanyLogo = (company) => {
@@ -63,8 +65,8 @@ export default function Timeline({ items }) {
               src={getCompanyLogo(item.company)} 
               alt={item.company}
               style={{
-                width: 36,
-                height: 36,
+                width: 40,
+                height: 40,
                 marginBottom: 12,
                 borderRadius: 6,
                 objectFit: 'contain',
