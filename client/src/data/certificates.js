@@ -5,7 +5,7 @@ const certificates = [
     issuer: 'ALX Africa',
     date: '2025',
     status: 'completed',
-    certificateUrl: '/certificates/professional foundations by alx africa 2025.png'
+    certificateUrl: '/certificates/professional-foundations-alx-2025.png'
   },
   {
     iconType: 'graduation',
@@ -13,7 +13,7 @@ const certificates = [
     issuer: 'LinkedIn Learning',
     date: '2024',
     status: 'completed',
-    certificateUrl: '/certificates/Building Modern Projects with React By Linkedinlearning 2024.pdf'
+    certificateUrl: '/certificates/building-modern-projects-react-2024.pdf'
   },
   {
     iconType: 'briefcase',
@@ -21,7 +21,7 @@ const certificates = [
     issuer: 'Nishkaam Innovations LLP',
     date: '2024',
     status: 'completed',
-    certificateUrl: '/certificates/Internship Completion by Nishkaam Innovations Llp 2024.pdf'
+    certificateUrl: '/certificates/internship-completion-nishkaam-2024.pdf'
   },
   {
     iconType: 'graduation',
@@ -29,7 +29,7 @@ const certificates = [
     issuer: 'Marwadi University',
     date: '2024',
     status: 'completed',
-    certificateUrl: '/certificates/Deep dive into Business by Marwadi University 2024.png'
+    certificateUrl: '/certificates/deep-dive-business-marwadi-2024.png'
   },
   {
     iconType: 'graduation',
@@ -37,7 +37,7 @@ const certificates = [
     issuer: 'Kaggle',
     date: '2023',
     status: 'completed',
-    certificateUrl: '/certificates/Intermediate Machine Learning by kaggle 2023.png'
+    certificateUrl: '/certificates/intermediate-machine-learning-kaggle-2023.png'
   },
   {
     iconType: 'graduation',
@@ -45,7 +45,7 @@ const certificates = [
     issuer: 'Kaggle',
     date: '2023',
     status: 'completed',
-    certificateUrl: '/certificates/ntro to Machine Learning by Kaggle 2023.png'
+    certificateUrl: '/certificates/intro-machine-learning-kaggle-2023.png'
   },
   {
     iconType: 'graduation',
@@ -53,7 +53,7 @@ const certificates = [
     issuer: 'Pupilfirst',
     date: '2023',
     status: 'completed',
-    certificateUrl: '/certificates/Web Development 101 By Pupilfirst 2023.pdf'
+    certificateUrl: '/certificates/web-development-101-pupilfirst-2023.pdf'
   },
   {
     iconType: 'bolt',
@@ -61,7 +61,7 @@ const certificates = [
     issuer: 'Sololearn',
     date: '2022',
     status: 'completed',
-    certificateUrl: '/certificates/C++ by Sololearn 2022.pdf'
+    certificateUrl: '/certificates/cpp-programming-sololearn-2022.pdf'
   },
   {
     iconType: 'bolt',
@@ -69,7 +69,7 @@ const certificates = [
     issuer: 'Sololearn',
     date: '2022',
     status: 'completed',
-    certificateUrl: '/certificates/JAVA by sololearn 2022.pdf'
+    certificateUrl: '/certificates/java-programming-sololearn-2022.pdf'
   },
   {
     iconType: 'bolt',
@@ -77,7 +77,7 @@ const certificates = [
     issuer: 'Sololearn',
     date: '2022',
     status: 'completed',
-    certificateUrl: '/certificates/JavaScript by sololearn 2022.pdf'
+    certificateUrl: '/certificates/javascript-sololearn-2022.pdf'
   },
   {
     iconType: 'bolt',
@@ -85,7 +85,7 @@ const certificates = [
     issuer: 'Cisco',
     date: '2022',
     status: 'completed',
-    certificateUrl: '/certificates/Introduction to Networks by Cisco 2022.pdf'
+    certificateUrl: '/certificates/intro-networks-cisco-2022.pdf'
   },
   {
     iconType: 'bolt',
@@ -93,7 +93,7 @@ const certificates = [
     issuer: 'Cisco',
     date: '2022',
     status: 'completed',
-    certificateUrl: '/certificates/Networking Essentials by Cisco 2022.pdf'
+    certificateUrl: '/certificates/networking-essentials-cisco-2022.pdf'
   },
   {
     iconType: 'database',
@@ -101,7 +101,7 @@ const certificates = [
     issuer: 'Oracle Academy',
     date: '2021',
     status: 'completed',
-    certificateUrl: '/certificates/Database Programming with SQl by oracle 2021.pdf'
+    certificateUrl: '/certificates/database-programming-sql-oracle-2021.pdf'
   },
   {
     iconType: 'bolt',
@@ -109,7 +109,7 @@ const certificates = [
     issuer: 'Oracle Academy',
     date: '2021',
     status: 'completed',
-    certificateUrl: '/certificates/Programming with SQL by oracle 2021.pdf'
+    certificateUrl: '/certificates/programming-sql-oracle-2021.pdf'
   },
   {
     iconType: 'bolt',
@@ -117,7 +117,7 @@ const certificates = [
     issuer: 'Sololearn',
     date: '2021',
     status: 'completed',
-    certificateUrl: '/certificates/HTML by Sololearn 2021.pdf'
+    certificateUrl: '/certificates/html-sololearn-2021.pdf'
   },
   {
     iconType: 'bolt',
@@ -125,7 +125,7 @@ const certificates = [
     issuer: 'University of Colorado',
     date: '2021',
     status: 'completed',
-    certificateUrl: '/certificates/LINUX MANAGEMENT by university of Colorado 2021.pdf'
+    certificateUrl: '/certificates/linux-management-colorado-2021.pdf'
   },
   {
     iconType: 'bolt',
@@ -133,7 +133,7 @@ const certificates = [
     issuer: 'Sololearn',
     date: '2021',
     status: 'completed',
-    certificateUrl: '/certificates/php by sololearn 2021.pdf'
+    certificateUrl: '/certificates/php-sololearn-2021.pdf'
   }
 ];
 

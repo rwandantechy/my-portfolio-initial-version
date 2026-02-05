@@ -36,7 +36,7 @@ const officialIssuerLogoMap = {
   'ALX Africa': 'https://www.alxafrica.com/wp-content/uploads/2023/12/logo-black.svg',
   'Pupilfirst': 'https://www.pupilfirst.org/pupilfirst.svg',
   'University of Colorado': 'https://www.colorado.edu/favicon.ico',
-  'Marwadi University': 'https://www.marwadiuniversity.ac.in/favicon.ico',
+  'Marwadi University': 'https://www.lawctopus.com/wp-content/uploads/2024/05/MU_LOGO_BLACK.jpg',
   'Nishkaam Innovations LLP': 'https://nishkaamllp.com/favicon.ico'
 };
 
