@@ -973,7 +973,7 @@ textarea {
   flex: 1;
   position: relative;
   z-index: 1;
-  padding-top: 80px; /* Space for fixed navbar */
+  padding-top: 120px; /* Increased space for fixed navbar */
 }
 
 /* ============================================
@@ -1611,7 +1611,8 @@ textarea {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 5rem 0 4rem 0;
+  position: relative;
 }
 
 /* Hero Section Improvements */
@@ -1621,7 +1622,8 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 6rem 0;
+  padding: 8rem 0 6rem 0;
+  margin-top: 2rem;
 }
 
 .hero .container {
@@ -1690,11 +1692,16 @@ section {
   .hero {
     /* Allow hero to shrink naturally on mobile. Firefox does not support min-height:auto; */
     min-height: unset;
-    padding: 4rem 0;
+    padding: 5rem 0 4rem 0;
+    margin-top: 1.5rem;
   }
 
   section {
-    padding: 3rem 0;
+    padding: 4rem 0 3rem 0;
+  }
+
+  .main-content {
+    padding-top: 100px;
   }
 
   .navbar-logo {
@@ -1717,15 +1724,17 @@ section {
   }
 
   .main-content {
-    padding-top: 60px;
+    padding-top: 80px;
   }
 
-  .social-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+  section {
+    padding: 3rem 0 2rem 0;
   }
-}
+
+  .hero {
+    padding: 4rem 0 3rem 0;
+    margin-top: 1rem;
+  }
 
 /* ============================================
    HOME PAGE STYLES
