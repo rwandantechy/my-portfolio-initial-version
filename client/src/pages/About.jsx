@@ -61,7 +61,7 @@ export default function About(){
   const quickStats = [
     { icon: <FaGraduationCap />, value: '2', label: 'Degrees' },
     { icon: <FaCode />, value: '10+', label: 'Projects' },
-    { icon: <FaAward />, value: '5+', label: 'Certifications' },
+    { icon: <FaAward />, value: '17', label: 'Certifications' },
     { icon: <FaBrain />, value: '3+', label: 'Years Experience' }
   ];
 
@@ -302,127 +302,154 @@ export default function About(){
               iconType="graduation"
               title="Intermediate Machine Learning"
               issuer="Kaggle"
-              date="2024"
+              date="2023"
               status="completed"
-              certificateUrl="/certificates/Innocent Niyonzima - Intermediate Machine Learning.png"
+              certificateUrl="/certificates/Intermediate Machine Learning by kaggle 2023.png"
               index={0}
             />
             <CertificationCard
               iconType="graduation"
               title="Introduction to Machine Learning"
               issuer="Kaggle"
-              date="2024"
+              date="2023"
               status="completed"
-              certificateUrl="/certificates/Innocent Niyonzima  - Intro to Machine Learning.png"
+              certificateUrl="/certificates/ntro to Machine Learning by Kaggle 2023.png"
               index={1}
             />
             <CertificationCard
               iconType="graduation"
               title="Building Modern Projects with React"
-              issuer="Udemy"
+              issuer="LinkedIn Learning"
               date="2024"
               status="completed"
-              certificateUrl="/certificates/CertificateOfCompletion_Building Modern Projects with React.pdf"
+              certificateUrl="/certificates/Building Modern Projects with React By Linkedinlearning 2024.pdf"
               index={2}
             />
             <CertificationCard
               iconType="database"
               title="Database Programming with SQL"
               issuer="Oracle Academy"
-              date="2024"
+              date="2021"
               status="completed"
-              certificateUrl="/certificates/Database Programming with SQl.pdf"
+              certificateUrl="/certificates/Database Programming with SQl by oracle 2021.pdf"
               index={3}
             />
             <CertificationCard
               iconType="bolt"
               title="Programming with SQL"
               issuer="Oracle Academy"
-              date="2024"
+              date="2021"
               status="completed"
-              certificateUrl="/certificates/Programming with SQL.pdf"
+              certificateUrl="/certificates/Programming with SQL by oracle 2021.pdf"
               index={4}
-            />
-            <CertificationCard
-              iconType="database"
-              title="SQL Oracle"
-              issuer="Oracle Academy"
-              date="2023"
-              status="completed"
-              certificateUrl="/certificates/SQL _ORACLE.pdf"
-              index={5}
             />
             <CertificationCard
               iconType="bolt"
               title="C++ Programming"
-              issuer="Programming Course"
-              date="2023"
+              issuer="Sololearn"
+              date="2022"
               status="completed"
-              certificateUrl="/certificates/C++.pdf"
-              index={6}
+              certificateUrl="/certificates/C++ by Sololearn 2022.pdf"
+              index={5}
             />
             <CertificationCard
               iconType="bolt"
               title="Java Programming"
-              issuer="Programming Course"
-              date="2023"
+              issuer="Sololearn"
+              date="2022"
               status="completed"
-              certificateUrl="/certificates/JAVA.pdf"
-              index={7}
+              certificateUrl="/certificates/JAVA by sololearn 2022.pdf"
+              index={6}
             />
             <CertificationCard
               iconType="bolt"
               title="PHP Web Development"
-              issuer="Web Development Course"
-              date="2023"
+              issuer="Sololearn"
+              date="2021"
               status="completed"
-              certificateUrl="/certificates/php.pdf"
+              certificateUrl="/certificates/php by sololearn 2021.pdf"
+              index={7}
+            />
+            <CertificationCard
+              iconType="bolt"
+              title="JavaScript Programming"
+              issuer="Sololearn"
+              date="2022"
+              status="completed"
+              certificateUrl="/certificates/JavaScript by sololearn 2022.pdf"
               index={8}
             />
             <CertificationCard
               iconType="bolt"
-              title="JavaScript Fundamentals"
-              issuer="Various Platforms"
-              date="2023"
+              title="HTML Basics"
+              issuer="Sololearn"
+              date="2021"
               status="completed"
-              certificateUrl="/certificates/Certificate JavaScript.pdf"
+              certificateUrl="/certificates/HTML by Sololearn 2021.pdf"
               index={9}
             />
             <CertificationCard
               iconType="bolt"
-              title="HTML Basics"
-              issuer="Web Development Course"
-              date="2023"
+              title="Linux Management"
+              issuer="University of Colorado"
+              date="2021"
               status="completed"
-              certificateUrl="/certificates/HTML.pdf"
+              certificateUrl="/certificates/LINUX MANAGEMENT by university of Colorado 2021.pdf"
               index={10}
             />
             <CertificationCard
               iconType="bolt"
-              title="Linux Management"
-              issuer="System Administration Course"
-              date="2023"
+              title="Networking Essentials"
+              issuer="Cisco"
+              date="2022"
               status="completed"
-              certificateUrl="/certificates/LINUX MANAGEMENT.pdf"
+              certificateUrl="/certificates/Networking Essentials by Cisco 2022.pdf"
               index={11}
             />
             <CertificationCard
               iconType="bolt"
-              title="Networking Essentials"
-              issuer="Networking Course"
-              date="2023"
+              title="Introduction to Networks"
+              issuer="Cisco"
+              date="2022"
               status="completed"
-              certificateUrl="/certificates/Networking Essentials.pdf"
+              certificateUrl="/certificates/Introduction to Networks by Cisco 2022.pdf"
               index={12}
             />
             <CertificationCard
-              iconType="bolt"
-              title="Introduction to Networks"
-              issuer="Cisco Networking Academy"
+              iconType="graduation"
+              title="Web Development 101"
+              issuer="Pupilfirst"
               date="2023"
               status="completed"
-              certificateUrl="/certificates/Introduction to Networks.pdf"
+              certificateUrl="/certificates/Web Development 101 By Pupilfirst 2023.pdf"
               index={13}
+            />
+            <CertificationCard
+              iconType="briefcase"
+              title="Professional Foundations"
+              issuer="ALX Africa"
+              date="2025"
+              status="completed"
+              certificateUrl="/certificates/professional foundations by alx africa 2025.png"
+              index={14}
+            />
+            <CertificationCard
+              iconType="briefcase"
+              title="Internship Completion"
+              issuer="Nishkaam Innovations LLP"
+              date="2024"
+              status="completed"
+              certificateUrl="/certificates/Internship Completion by Nishkaam Innovations Llp 2024.pdf"
+              index={15}
+            />
+            <CertificationCard
+              iconType="graduation"
+              title="Deep Dive into Business"
+              issuer="Marwadi University"
+              date="2024"
+              status="completed"
+              certificateUrl="/certificates/Deep dive into Business by Marwadi University 2024.png"
+              index={16}
             />
           </div>
         </motion.div>
