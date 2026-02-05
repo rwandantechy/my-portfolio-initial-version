@@ -52,7 +52,7 @@ export default function Contact(){
               <FaEnvelope className="contact-icon" />
               <div>
                 <h4>Email</h4>
-                <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}`}>{import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}</a>
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               </div>
             </motion.div>
             
@@ -72,7 +72,7 @@ export default function Contact(){
             <h4>Connect With Me</h4>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
               <motion.a 
-                href={import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com'}
+                href={SOCIAL.LINKEDIN}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon-contact"
@@ -82,7 +82,7 @@ export default function Contact(){
                 <FaLinkedin />
               </motion.a>
               <motion.a 
-                href={import.meta.env.VITE_GITHUB_URL || 'https://github.com'}
+                href={SOCIAL.GITHUB}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon-contact"
@@ -92,7 +92,7 @@ export default function Contact(){
                 <FaGithub />
               </motion.a>
               <motion.a 
-                href={import.meta.env.VITE_TWITTER_URL || 'https://twitter.com'}
+                href={SOCIAL.TWITTER}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon-contact"

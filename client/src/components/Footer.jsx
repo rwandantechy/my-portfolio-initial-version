@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { CONTACT_EMAIL, SOCIAL } from '../config/env';
 
 export default function Footer(){
   const socialLinks = [
-    { icon: FaGithub, href: import.meta.env.VITE_GITHUB_URL || 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: import.meta.env.VITE_TWITTER_URL || 'https://twitter.com', label: 'Twitter' },
-    { icon: FaEnvelope, href: `mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}`, label: 'Email' }
+    { icon: FaGithub, href: SOCIAL.GITHUB, label: 'GitHub' },
+    { icon: FaLinkedin, href: SOCIAL.LINKEDIN, label: 'LinkedIn' },
+    { icon: FaTwitter, href: SOCIAL.TWITTER, label: 'Twitter' },
+    { icon: FaEnvelope, href: `mailto:${CONTACT_EMAIL}`, label: 'Email' }
   ];
 
   const footerLinks = [
@@ -48,7 +49,7 @@ export default function Footer(){
           <div className="footer-section">
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
-              <li>📧 {import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}</li>
+              <li>📧 {CONTACT_EMAIL}</li>
               <li>💼 Available for opportunities</li>
             </ul>
           </div>

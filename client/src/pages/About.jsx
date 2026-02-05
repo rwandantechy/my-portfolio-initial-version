@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaLaptopCode, FaCode, FaBrain } from 'react-icons/fa';
+import { CONTACT_EMAIL, SOCIAL } from '../config/env';
 import { useInView } from 'react-intersection-observer';
 import Timeline from '../components/Timeline';
 import SkillsGrid from '../components/SkillsGrid';
@@ -71,15 +72,15 @@ export default function About(){
 
               <div className="about-contact-links">
                 <motion.a 
-                  href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}`}
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="contact-chip"
                   whileHover={{ y: -4, scale: 1.05 }}
                 >
                   <FaEnvelope />
-                  {import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}
+                  {CONTACT_EMAIL}
                 </motion.a>
                 <motion.a 
-                  href={import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com'} 
+                  href={SOCIAL.LINKEDIN} 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-chip"
@@ -89,7 +90,7 @@ export default function About(){
                   LinkedIn
                 </motion.a>
                 <motion.a 
-                  href={import.meta.env.VITE_GITHUB_URL || 'https://github.com'} 
+                  href={SOCIAL.GITHUB} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="contact-chip"
@@ -102,7 +103,7 @@ export default function About(){
 
               <div className="about-social-links">
                 <motion.a 
-                  href={import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com'} 
+                  href={SOCIAL.LINKEDIN} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-link-btn"
@@ -111,7 +112,7 @@ export default function About(){
                   <FaLinkedin />
                 </motion.a>
                 <motion.a 
-                  href={import.meta.env.VITE_GITHUB_URL || 'https://github.com'} 
+                  href={SOCIAL.GITHUB} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-link-btn"
@@ -120,7 +121,7 @@ export default function About(){
                   <FaGithub />
                 </motion.a>
                 <motion.a 
-                  href={import.meta.env.VITE_TWITTER_URL || 'https://twitter.com'} 
+                  href={SOCIAL.TWITTER} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="social-link-btn"
