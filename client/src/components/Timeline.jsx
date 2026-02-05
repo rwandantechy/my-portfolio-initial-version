@@ -73,7 +73,8 @@ export default function Timeline({ items }) {
                 padding: 3,
                 backgroundColor: 'var(--logo-bg)',
                 border: '2px solid var(--color-primary)',
-                opacity: 0.95
+                opacity: 0.95,
+                zIndex: 10
               }}
               onError={(e) => {
                 // Fallback if logo fails to load

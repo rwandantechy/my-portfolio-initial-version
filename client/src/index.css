@@ -3161,6 +3161,7 @@ section {
   border: 2px solid var(--color-primary);
   border-radius: 12px;
   flex-shrink: 0;
+  z-index: 10;
 }
 
 .education-logo {
@@ -3174,6 +3175,7 @@ section {
   flex-shrink: 0;
   transition: all var(--transition);
   opacity: 0.95;
+  z-index: 10;
 }
 
 .education-item:hover .education-logo {
