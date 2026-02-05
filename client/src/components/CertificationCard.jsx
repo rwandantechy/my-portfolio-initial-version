@@ -31,10 +31,10 @@ const officialIssuerLogoMap = {
   'Oracle Academy': 'https://techsassygirlz.org/home/oracle-academy-logo1-800x343/',
   'Kaggle': 'https://www.kaggle.com/static/images/site-logo.png',
   'Sololearn': 'https://www.sololearn.com/images/logo.svg',
-  'Cisco': 'https://www.cisco.com/favicon.ico',
+  'Cisco': 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Cisco_academy_logo.svg',
   'LinkedIn Learning': 'https://www.linkedin.com/favicon.ico',
-  'ALX Africa': 'https://www.alxafrica.com/favicon.ico',
-  'Pupilfirst': 'https://www.pupilfirst.com/favicon.ico',
+  'ALX Africa': 'https://www.alxafrica.com/wp-content/uploads/2023/12/logo-black.svg',
+  'Pupilfirst': 'https://www.pupilfirst.org/pupilfirst.svg',
   'University of Colorado': 'https://www.colorado.edu/favicon.ico',
   'Marwadi University': 'https://www.marwadiuniversity.ac.in/favicon.ico',
   'Nishkaam Innovations LLP': 'https://nishkaamllp.com/favicon.ico'
