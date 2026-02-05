@@ -71,8 +71,8 @@ export default function Timeline({ items }) {
                 borderRadius: 6,
                 objectFit: 'contain',
                 padding: 4,
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)'
+                backgroundColor: 'var(--color-card)',
+                border: '2px solid var(--color-primary)'
               }}
               onError={(e) => {
                 // Fallback if logo fails to load

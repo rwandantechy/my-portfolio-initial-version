@@ -3155,10 +3155,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, 
-    rgba(var(--accent-primary-rgb), 0.15), 
-    rgba(var(--accent-secondary-rgb), 0.15)
-  );
+  background: var(--color-card);
+  border: 2px solid var(--color-primary);
   border-radius: 12px;
   flex-shrink: 0;
 }
@@ -3169,22 +3167,16 @@ section {
   border-radius: 12px;
   object-fit: contain;
   padding: 8px;
-  background: linear-gradient(135deg, 
-    rgba(var(--accent-primary-rgb), 0.15), 
-    rgba(var(--accent-secondary-rgb), 0.15)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card);
+  border: 2px solid var(--color-primary);
   flex-shrink: 0;
   transition: all var(--transition);
 }
 
 .education-item:hover .education-logo {
-  background: linear-gradient(135deg, 
-    rgba(var(--accent-primary-rgb), 0.25), 
-    rgba(var(--accent-secondary-rgb), 0.25)
-  );
-  border-color: rgba(253, 150, 26, 0.3);
-  box-shadow: 0 4px 12px rgba(253, 150, 26, 0.15);
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 12px rgba(253, 150, 26, 0.25);
+  transform: translateY(-2px);
 }
 
 .education-content h4 {
