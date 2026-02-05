@@ -52,7 +52,7 @@ export default function Contact(){
               <FaEnvelope className="contact-icon" />
               <div>
                 <h4>Email</h4>
-                <a href="mailto:contact@example.com">contact@example.com</a>
+                <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}`}>{import.meta.env.VITE_CONTACT_EMAIL || 'contact@example.com'}</a>
               </div>
             </motion.div>
             
