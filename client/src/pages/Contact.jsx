@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaCheck } from 'react-icons/fa';
+import { CONTACT_EMAIL, SOCIAL } from '../config/env';
 
 export default function Contact(){
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -160,7 +161,7 @@ export default function Contact(){
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {status === 'sending' ? 'Sending...' : status === 'sent' ? '✓ Sent!' : 'Send Message'}
+              {status === 'sending' ? 'Sending...' : status === 'sent' ? <><FaCheck style={{ marginRight: 6 }} /> Sent!</> : 'Send Message'}
             </motion.button>
             
             {status === 'sent' && (
