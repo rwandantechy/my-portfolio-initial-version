@@ -363,18 +363,19 @@ nav a.active {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   background: var(--gradient-primary);
-  color: #000;
+  color: #fff;
   border: none;
-  border-radius: var(--radius-full);
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(253, 150, 26, 0.3);
+  box-shadow: 0 8px 30px rgba(253, 150, 26, 0.4);
+  letter-spacing: 0.3px;
 }
 
 .btn::before {
@@ -385,7 +386,7 @@ nav a.active {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
 }
@@ -396,30 +397,30 @@ nav a.active {
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: var(--shadow-glow-hover);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(253, 150, 26, 0.6);
 }
 
 .btn:active {
-  transform: translateY(-1px) scale(0.98);
+  transform: translateY(-2px) scale(0.98);
 }
 
 .btn-outline {
-  background: transparent;
+  background: rgba(253, 150, 26, 0.08);
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  box-shadow: none;
+  border: 2.5px solid var(--color-primary);
+  box-shadow: 0 4px 20px rgba(253, 150, 26, 0.15);
 }
 
 .btn-outline::before {
-  background: rgba(253, 150, 26, 0.1);
+  background: rgba(253, 150, 26, 0.15);
 }
 
 .btn-outline:hover {
-  background: rgba(253, 150, 26, 0.1);
-  color: var(--color-primary-light);
-  border-color: var(--color-primary-light);
-  box-shadow: 0 4px 20px rgba(253, 150, 26, 0.2);
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px rgba(253, 150, 26, 0.5);
 }
 
 /* ============================================
