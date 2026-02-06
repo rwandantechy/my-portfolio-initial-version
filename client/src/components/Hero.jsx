@@ -70,20 +70,6 @@ export default function Hero() {
           </motion.p>
           
           <motion.div 
-            className="hero__cta"
-            variants={itemVariants}
-          >
-            <Link to="/projects" className="btn btn-primary">
-              <FaRocket style={{ marginRight: 8 }} />
-              Explore My Work
-            </Link>
-            <Link to="/contact" className="btn btn-secondary">
-              <FaBolt style={{ marginRight: 8 }} />
-              Start a Project
-            </Link>
-          </motion.div>
-          
-          <motion.div 
             className="hero__stats"
             variants={containerVariants}
           >
