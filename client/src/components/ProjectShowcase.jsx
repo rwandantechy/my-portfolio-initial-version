@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaStar } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaStar, FaTarget, FaLightbulb, FaChartLine } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 export default function ProjectShowcase({ project, index }) {
@@ -114,7 +114,7 @@ export default function ProjectShowcase({ project, index }) {
                   transition={{ delay: 0.1 }}
                 >
                   <div className="detail-header">
-                    <span className="detail-icon">🎯</span>
+                    <FaTarget className="detail-icon" />
                     <h4>Key Challenges</h4>
                   </div>
                   <ul className="detail-list">
@@ -140,7 +140,7 @@ export default function ProjectShowcase({ project, index }) {
                   transition={{ delay: 0.2 }}
                 >
                   <div className="detail-header">
-                    <span className="detail-icon">💡</span>
+                    <FaLightbulb className="detail-icon" />
                     <h4>Solutions Implemented</h4>
                   </div>
                   <ul className="detail-list">
@@ -166,7 +166,7 @@ export default function ProjectShowcase({ project, index }) {
                   transition={{ delay: 0.3 }}
                 >
                   <div className="detail-header">
-                    <span className="detail-icon">📈</span>
+                    <FaChartLine className="detail-icon" />
                     <h4>Results & Impact</h4>
                   </div>
                   <ul className="detail-list">

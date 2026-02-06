@@ -2264,6 +2264,10 @@ section {
 .detail-icon {
   font-size: 1.5rem;
   line-height: 1;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .detail-header h4 {
