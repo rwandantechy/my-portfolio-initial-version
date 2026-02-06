@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart, FaBriefcase } from 'react-icons/fa';
 import { CONTACT_EMAIL, SOCIAL } from '../config/env';
 
 export default function Footer(){
@@ -49,8 +49,8 @@ export default function Footer(){
           <div className="footer-section">
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
-              <li>📧 {CONTACT_EMAIL}</li>
-              <li>💼 Available for opportunities</li>
+              <li><FaEnvelope style={{ marginRight: 8 }} /> {CONTACT_EMAIL}</li>
+              <li><FaBriefcase style={{ marginRight: 8 }} /> Available for opportunities</li>
             </ul>
           </div>
 
