@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaFilter, FaCode, FaStar, FaCog, FaUsers } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import ProjectShowcase from '../components/ProjectShowcase';
 import { detailedProjects } from '../data/detailedProjects';
@@ -14,13 +14,6 @@ export default function Projects(){
   const filteredProjects = filter === 'all' 
     ? sourceProjects 
     : sourceProjects.filter(p => p.featured);
-
-  const stats = {
-    total: detailedProjects.length,
-    featured: detailedProjects.filter(p => p.featured).length,
-    technologies: [...new Set(detailedProjects.flatMap(p => p.tech || []))].length,
-    users: '72K+'
-  };
 
   return (
     <section className="container" style={{ paddingTop: 40, paddingBottom: 80 }}>
@@ -49,55 +42,13 @@ export default function Projects(){
           Projects focused on backend architecture, production constraints, and reliability under real usage
         </motion.p>
 
-        {/* Stats Grid */}
-        <motion.div 
-          className="projects-stats-grid"
-          initial={{ opacity: 0, y: 20 }}
-          animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <motion.div 
-            className="stat-card"
-            whileHover={{ y: -4, scale: 1.02 }}
-          >
-            <FaCode className="stat-icon" />
-            <div className="stat-value gradient-text">{stats.total}</div>
-            <div className="stat-label">Projects</div>
-          </motion.div>
-          <motion.div 
-            className="stat-card"
-            whileHover={{ y: -4, scale: 1.02 }}
-          >
-            <FaStar className="stat-icon" />
-            <div className="stat-value gradient-text">{stats.featured}</div>
-            <div className="stat-label">Featured</div>
-          </motion.div>
-          <motion.div 
-            className="stat-card"
-            whileHover={{ y: -4, scale: 1.02 }}
-          >
-            <FaCog className="stat-icon" />
-            <div className="stat-value gradient-text">{stats.technologies}</div>
-            <div className="stat-label">Technologies</div>
-          </motion.div>
-          <motion.div 
-            className="stat-card"
-            whileHover={{ y: -4, scale: 1.02 }}
-          >
-            <FaUsers className="stat-icon" />
-            <div className="stat-value gradient-text">{stats.users}</div>
-            <div className="stat-label">Total Users</div>
-          </motion.div>
-        </motion.div>
-
         {/* Filters */}
         <motion.div 
           className="project-filters-wrapper"
           initial={{ opacity: 0, y: 20 }}
           animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <FaFilter className="filter-icon" />
           <div className="project-filters">
             <motion.button 
               className={`filter-btn ${filter === 'all' ? 'active' : ''}`}

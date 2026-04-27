@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBrain, FaLaptopCode, FaRocket, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import Hero from '../components/Hero';
 import { detailedProjects } from '../data/detailedProjects';
@@ -8,62 +8,14 @@ import { Link } from 'react-router-dom';
 
 export default function Home(){
   const featuredProjects = detailedProjects.filter(p => p.featured).slice(0, 3);
-  const [highlightsRef, highlightsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [projectsRef, projectsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <>
       <Hero />
       
-      {/* Quick Highlights Section */}
-      <section ref={highlightsRef} className="container" style={{paddingTop:80,paddingBottom:80}}>
-        <div className="highlights-grid">
-          <motion.div 
-            className="highlight-card"
-            initial={{ opacity: 0, y: 50 }}
-            animate={highlightsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0 }}
-            whileHover={{ y: -12, transition: { duration: 0.3 } }}
-          >
-            <FaLaptopCode className="highlight-icon" style={{ fontSize: '3.5rem', color: 'var(--color-primary)' }} />
-            <h3>Technical Expertise</h3>
-            <p className="muted">
-              Backend engineering for APIs, data flows, and resilient production operations
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="highlight-card"
-            initial={{ opacity: 0, y: 50 }}
-            animate={highlightsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            whileHover={{ y: -12, transition: { duration: 0.3 } }}
-          >
-            <FaRocket className="highlight-icon" style={{ fontSize: '3.5rem', color: 'var(--color-secondary)' }} />
-            <h3>Production-Ready Solutions</h3>
-            <p className="muted">
-              Operating backend systems in production with deployment discipline and incident response
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="highlight-card"
-            initial={{ opacity: 0, y: 50 }}
-            animate={highlightsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            whileHover={{ y: -12, transition: { duration: 0.3 } }}
-          >
-            <FaRocket className="highlight-icon" style={{ fontSize: '3.5rem', color: 'var(--color-accent)' }} />
-            <h3>Real-World Impact</h3>
-            <p className="muted">
-              Services supporting 72K+ users with uptime-focused debugging and maintenance
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Featured Projects Preview */}
-      <section ref={projectsRef} className="container" style={{paddingBottom:80}}>
+      <section ref={projectsRef} className="container" style={{paddingTop:40,paddingBottom:80}}>
         <motion.div 
           style={{textAlign:'center',marginBottom:48}}
           initial={{ opacity: 0, y: 30 }}

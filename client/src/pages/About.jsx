@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaGraduationCap, FaAward, FaGlobe, FaLaptopCode, FaCode, FaBrain } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaGraduationCap, FaAward, FaGlobe, FaLaptopCode, FaCode, FaBrain } from 'react-icons/fa';
 import { CONTACT_EMAIL, SOCIAL } from '../config/env';
 import { useInView } from 'react-intersection-observer';
 import Timeline from '../components/Timeline';
@@ -11,14 +11,6 @@ import certificates from '../data/certificates';
 
 export default function About(){
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
-  const quickStats = [
-    { icon: <FaGraduationCap />, value: '2', label: 'Degrees' },
-    { icon: <FaCode />, value: '10+', label: 'Projects' },
-    { icon: <FaAward />, value: '17', label: 'Certifications' },
-    { icon: <FaBrain />, value: '3+', label: 'Years Experience' }
-  ];
 
   return (
     <section className="about-page">
@@ -100,65 +92,10 @@ export default function About(){
                 </motion.a>
               </div>
 
-              <div className="about-social-links">
-                <motion.a 
-                  href={SOCIAL.LINKEDIN} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="social-link-btn"
-                  whileHover={{ y: -4 }}
-                >
-                  <FaLinkedin />
-                </motion.a>
-                <motion.a 
-                  href={SOCIAL.GITHUB} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="social-link-btn"
-                  whileHover={{ y: -4 }}
-                >
-                  <FaGithub />
-                </motion.a>
-                <motion.a 
-                  href={SOCIAL.TWITTER} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="social-link-btn"
-                  whileHover={{ y: -4 }}
-                >
-                  <FaMapMarkerAlt />
-                </motion.a>
-              </div>
             </motion.div>
           </div>
         </div>
       </motion.div>
-
-      {/* Quick Stats */}
-      <div className="container">
-        <motion.div 
-          ref={statsRef}
-          className="about-stats-grid"
-          initial={{ opacity: 0, y: 30 }}
-          animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
-          {quickStats.map((stat, idx) => (
-            <motion.div 
-              key={idx}
-              className="about-stat-card"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={statsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -8, scale: 1.05 }}
-            >
-              <div className="stat-icon-large">{stat.icon}</div>
-              <div className="stat-value-xl gradient-text">{stat.value}</div>
-              <div className="stat-label-xl">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
 
       {/* Main Content */}
       <div className="container about-content">
