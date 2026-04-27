@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 import Timeline from '../components/Timeline';
 import SkillsGrid from '../components/SkillsGrid';
 import CertificationCard from '../components/CertificationCard';
-import InnocentImage from '../assets/images/Innocent.png';
 import experiences from '../data/experiences';
 import certificates from '../data/certificates';
 
@@ -40,7 +39,7 @@ export default function About(){
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="about-avatar">
-                <img src={InnocentImage} alt="Innocent Niyonzima" className="avatar-image" />
+                <img src="/Profile/profile.JPG" alt="Innocent Niyonzima" className="avatar-image" />
               </div>
               <motion.div 
                 className="avatar-status"

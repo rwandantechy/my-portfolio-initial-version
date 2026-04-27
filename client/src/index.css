@@ -12,6 +12,8 @@
   --color-primary-dark: #e88510;
   --color-secondary: #00d4ff;
   --color-accent: #ff4d6d;
+  --accent-primary: #fd961a;
+  --accent-secondary: #00d4ff;
   
   /* RGB values for colors (for rgba) */
   --color-primary-rgb: 253, 150, 26;
@@ -32,6 +34,9 @@
   --color-muted: #a0a0a0;
   --color-border: #2a2a2a;
   --logo-bg: #2a2a2a;
+  --surface-glass: rgba(255, 255, 255, 0.05);
+  --surface-glass-strong: rgba(255, 255, 255, 0.08);
+  --border-soft: rgba(255, 255, 255, 0.12);
   
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #fd961a 0%, #ffc947 100%);
@@ -71,6 +76,11 @@
     --color-muted: #5b6474;
     --color-border: #d9dee5;
     --logo-bg: #f0f0f0;
+    --accent-primary: #e88510;
+    --accent-secondary: #0085ff;
+    --surface-glass: rgba(15, 23, 42, 0.04);
+    --surface-glass-strong: rgba(15, 23, 42, 0.08);
+    --border-soft: rgba(15, 23, 42, 0.14);
     --gradient-primary: linear-gradient(135deg, #ffb347 0%, #fd961a 100%);
     --gradient-secondary: linear-gradient(135deg, #00b4ff 0%, #0085ff 100%);
     --gradient-accent: linear-gradient(135deg, #ff6b81 0%, #ff9e3d 100%);
@@ -1324,16 +1334,8 @@ textarea {
 
 .mobile-menu-toggle-premium:hover {
   border-color: var(--color-primary);
-  background: rgba(253, 150, 26, 0.1);
-}
-
-[data-theme="light"] .mobile-menu-toggle-premium:hover {
-  background: rgba(253, 150, 26, 0.08);
-}
-
-.mobile-menu-toggle-premium:hover {
   color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(var(--accent-primary-rgb), 0.14);
 }
 
 /* Mobile Menu */
@@ -2993,8 +2995,8 @@ section {
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-soft);
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -3021,8 +3023,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-soft);
   border-radius: 12px;
   color: var(--color-text);
   font-size: 1.25rem;
@@ -3046,8 +3048,8 @@ section {
 }
 
 .about-stat-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-soft);
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
@@ -3056,7 +3058,7 @@ section {
 }
 
 .about-stat-card:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface-glass-strong);
   border-color: rgba(var(--accent-primary-rgb), 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
@@ -3119,7 +3121,7 @@ section {
   gap: 1rem;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .section-icon {
@@ -3145,14 +3147,14 @@ section {
   grid-template-columns: auto 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-soft);
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .education-item:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface-glass-strong);
   border-color: rgba(var(--accent-primary-rgb), 0.3);
   transform: translateX(4px);
 }
@@ -3264,14 +3266,14 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-soft);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .language-item:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--surface-glass-strong);
   border-color: rgba(var(--accent-primary-rgb), 0.3);
   transform: translateX(4px);
 }
