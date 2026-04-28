@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaMoon, FaSun, FaRocket, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaMoon, FaSun, FaEnvelope } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeProvider';
+import InnocentImage from '../assets/images/Innocent.png';
 
 export default function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
@@ -32,34 +33,30 @@ export default function Navbar(){
 
   return (
     <motion.nav 
-      className={`navbar-premium ${scrolled ? 'navbar-scrolled' : ''}`}
+      className={`navbar-premium nb-shell ${scrolled ? 'navbar-scrolled' : ''}`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <div className="navbar-bg-blur" />
+      <div className="navbar-bg-blur nb-blur" />
       
       <div className="container">
-        <div className="navbar-content-premium">
-          {/* Logo / Branding */}
-          <Link to="/" className="navbar-logo-premium">
+        <div className="navbar-content-premium nb-content">
+          <Link to="/" className="navbar-logo-premium nb-brand">
             <motion.div 
-              className="logo-wrapper"
-              whileHover={{ scale: 1.05 }}
+              className="logo-wrapper nb-logo-wrapper"
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.95 }}
             >
-              {/* Desktop: Text Logo */}
-              <span className="logo-text desktop-logo">
-                <span className="gradient-text" style={{ fontSize: '1.4rem', fontWeight: '900' }}>Rwandantechy</span>
-              </span>
-              
-              {/* Mobile: Artistic Initials Logo */}
-              <span className="logo-initials mobile-logo">IN</span>
+              <img src={InnocentImage} alt="Innocent Niyonzima" className="logo-image nb-logo-image" />
             </motion.div>
+            <div className="nb-brand-text">
+              <span className="nb-name">Innocent Niyonzima</span>
+              <span className="nb-role">Backend Engineer</span>
+            </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <ul className="navbar-menu-premium desktop-menu">
+          <ul className="navbar-menu-premium desktop-menu nb-menu">
             {navLinks.map((link, idx) => (
               <motion.li 
                 key={link.to}
@@ -69,29 +66,22 @@ export default function Navbar(){
               >
                 <Link 
                   to={link.to} 
-                  className={`navbar-link-premium ${location.pathname === link.to ? 'active' : ''}`}
+                  className={`navbar-link-premium nb-link ${location.pathname === link.to ? 'active' : ''}`}
                 >
-                  <motion.span
-                    whileHover={{ y: -2 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {link.label}
-                  </motion.span>
+                  <span>{link.label}</span>
                 </Link>
               </motion.li>
             ))}
           </ul>
 
-          {/* Actions */}
-          <div className="navbar-actions">
-            {/* Theme Toggle */}
+          <div className="navbar-actions nb-actions">
             <motion.button
               type="button"
-              className="theme-toggle-premium"
+              className="theme-toggle-premium nb-theme-toggle"
               onClick={toggleTheme}
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               aria-pressed={theme === 'dark'}
-              whileHover={{ scale: 1.1, rotate: 180 }}
+              whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.9 }}
             >
               <AnimatePresence mode="wait">
@@ -119,21 +109,19 @@ export default function Navbar(){
               </AnimatePresence>
             </motion.button>
 
-            {/* CTA Button - Desktop Only */}
             <motion.div 
-              className="cta-wrapper desktop-only"
+              className="cta-wrapper desktop-only nb-cta-wrap"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" className="navbar-cta">
+              <Link to="/contact" className="navbar-cta nb-cta">
                 <FaEnvelope style={{ marginRight: '6px' }} />
-                Get In Touch
+                Contact
               </Link>
             </motion.div>
 
-            {/* Mobile Menu Toggle */}
             <motion.button 
-              className="mobile-menu-toggle-premium"
+              className="mobile-menu-toggle-premium nb-mobile-toggle"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
               aria-expanded={isOpen}
@@ -166,11 +154,10 @@ export default function Navbar(){
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div 
-              className="mobile-menu-premium"
+              className="mobile-menu-premium nb-mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -204,7 +191,7 @@ export default function Navbar(){
               >
                 <Link to="/contact" className="mobile-cta-btn" onClick={() => setIsOpen(false)}>
                   <FaEnvelope />
-                  Get In Touch
+                  Contact
                 </Link>
               </motion.div>
             </motion.div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useApp } from '../context/AppProvider';
 
 // Simple Icons CDN: https://cdn.simpleicons.org/
 const logoMap = {
@@ -84,32 +85,7 @@ const SkillCategory = ({ title, skills, index }) => {
 };
 
 export default function SkillsGrid() {
-  const skillCategories = [
-    {
-      title: 'Languages',
-      skills: ['C#', 'Python', 'JavaScript', 'TypeScript', 'C', 'C++', 'PHP', 'Java']
-    },
-    {
-      title: 'Frontend',
-      skills: ['React', 'HTML5', 'CSS3', 'Tailwind', 'Bootstrap', 'Redux']
-    },
-    {
-      title: 'Backend',
-      skills: ['Node.js', 'ASP.NET Core', 'Express', 'Laravel', 'REST APIs']
-    },
-    {
-      title: 'Databases',
-      skills: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis']
-    },
-    {
-      title: 'DevOps & Cloud',
-      skills: ['Docker', 'Git', 'CI/CD', 'VPS', 'NGINX', 'PM2', 'Linux']
-    },
-    {
-      title: 'Core Concepts',
-      skills: ['Data Structures & Algorithms', 'OOP', 'SDLC', 'System Design', 'Debugging', 'MVC', 'Ethical AI', 'AI Policy Implications']
-    }
-  ];
+  const { skills: skillCategories = [] } = useApp();
 
   return (
     <div className="skills-grid">

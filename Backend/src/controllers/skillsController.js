@@ -1,19 +1,9 @@
-const projectsService = require('../services/projectsService');
+const skillsService = require('../services/skillsService');
 
 exports.getAll = async (req, res, next) => {
   try {
-    const items = await projectsService.getAll();
+    const items = await skillsService.getAll();
     res.json(items);
-  } catch (err) {
-    next(err);
-  }
-};
-
-exports.getById = async (req, res, next) => {
-  try {
-    const item = await projectsService.getById(req.params.id);
-    if (!item) return res.status(404).json({ message: 'Not found' });
-    res.json(item);
   } catch (err) {
     next(err);
   }
@@ -21,7 +11,7 @@ exports.getById = async (req, res, next) => {
 
 exports.create = async (req, res, next) => {
   try {
-    const created = await projectsService.create(req.body);
+    const created = await skillsService.create(req.body);
     res.status(201).json(created);
   } catch (err) {
     next(err);
@@ -30,7 +20,7 @@ exports.create = async (req, res, next) => {
 
 exports.update = async (req, res, next) => {
   try {
-    const updated = await projectsService.update(req.params.id, req.body);
+    const updated = await skillsService.update(req.params.id, req.body);
     if (!updated) return res.status(404).json({ message: 'Not found' });
     res.json(updated);
   } catch (err) {
@@ -40,7 +30,7 @@ exports.update = async (req, res, next) => {
 
 exports.remove = async (req, res, next) => {
   try {
-    const deleted = await projectsService.remove(req.params.id);
+    const deleted = await skillsService.remove(req.params.id);
     if (!deleted) return res.status(404).json({ message: 'Not found' });
     res.status(204).send();
   } catch (err) {

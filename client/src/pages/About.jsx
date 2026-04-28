@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import Timeline from '../components/Timeline';
 import SkillsGrid from '../components/SkillsGrid';
 import CertificationCard from '../components/CertificationCard';
+import InnocentImage from '../assets/images/Innocent.png';
 import experiences from '../data/experiences';
 import certificates from '../data/certificates';
 
@@ -31,7 +32,7 @@ export default function About(){
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="about-avatar">
-                <img src="/Profile/profile.JPG" alt="Innocent Niyonzima" className="avatar-image" />
+                <img src={InnocentImage} alt="Innocent Niyonzima" className="avatar-image" />
               </div>
               <motion.div 
                 className="avatar-status"
@@ -57,8 +58,8 @@ export default function About(){
                 Backend Engineer focused on production systems, reliability, and deployment
               </p>
               <p className="about-description">
-                I build and operate backend services that run in live environments where uptime, recovery, and predictable deployments matter.
-                My work centers on APIs, incident debugging, Linux server operations, and keeping production systems stable as usage grows.
+                I build and maintain backend services used in real environments.
+                Most of my work is around APIs, debugging production issues, Linux servers, and reliable deployments.
               </p>
 
               <div className="about-contact-links">
@@ -88,7 +89,7 @@ export default function About(){
                   whileHover={{ y: -4, scale: 1.05 }}
                 >
                   <FaGlobe />
-                  linktr.ee
+                  GitHub
                 </motion.a>
               </div>
 

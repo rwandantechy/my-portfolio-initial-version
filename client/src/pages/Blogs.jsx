@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCalendar, FaClock, FaArrowRight, FaStar } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import blogPosts from '../data/blogs';
+import { useApp } from '../context/AppProvider';
 
 export default function Blogs(){
+  const { blogs: blogPosts = [], loadingBlogs } = useApp();
 
   return (
     <section className="container" style={{ paddingTop: 40, paddingBottom: 80 }}>
@@ -20,6 +20,7 @@ export default function Blogs(){
         </p>
       </motion.div>
 
+      {loadingBlogs && <p className="muted">Loading blogs...</p>}
       <div className="blog-grid">
         {blogPosts.map((post, idx) => (
           <motion.article 
@@ -54,10 +55,10 @@ export default function Blogs(){
               ))}
             </div>
 
-            <Link to={`/blogs/${post.id}`} className="blog-link">
+            <span className="blog-link">
               Read More
               <FaArrowRight style={{ marginLeft: 8 }} />
-            </Link>
+            </span>
           </motion.article>
         ))}
       </div>

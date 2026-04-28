@@ -3,14 +3,13 @@ import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import ProjectShowcase from '../components/ProjectShowcase';
-import { detailedProjects } from '../data/detailedProjects';
+import { useApp } from '../context/AppProvider';
 
 export default function Projects(){
   const [filter, setFilter] = useState('all');
   const [headerRef, headerInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const loadingProjects = false;
+  const { projects: sourceProjects = [], loadingProjects } = useApp();
   
-  const sourceProjects = detailedProjects;
   const filteredProjects = filter === 'all' 
     ? sourceProjects 
     : sourceProjects.filter(p => p.featured);
@@ -56,7 +55,7 @@ export default function Projects(){
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              All Projects ({detailedProjects.length})
+              All Projects ({sourceProjects.length})
             </motion.button>
             <motion.button 
               className={`filter-btn ${filter === 'featured' ? 'active' : ''}`}
@@ -64,7 +63,7 @@ export default function Projects(){
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <FaStar style={{ marginRight: 6 }} /> Featured ({detailedProjects.filter(p => p.featured).length})
+              <FaStar style={{ marginRight: 6 }} /> Featured ({sourceProjects.filter(p => p.featured).length})
             </motion.button>
           </div>
         </motion.div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaCode, FaRocket, FaUsers, FaBolt } from 'react-icons/fa';
+import { FaRocket, FaBolt, FaServer } from 'react-icons/fa';
 
 export default function Hero() {
   const containerVariants = {
@@ -29,13 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero">
-      <div className="hero__background">
-        <div className="hero__grid"></div>
-        <div className="hero__glow glow-1"></div>
-        <div className="hero__glow glow-2"></div>
-      </div>
-      
+    <section className="hero hd-shell">
       <div className="container">
         <motion.div 
           className="hero__content"
@@ -43,10 +37,14 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
+          <motion.div className="hd-badge" variants={itemVariants}>
+            <FaServer />
+            Backend APIs and infrastructure
+          </motion.div>
           
           <motion.div variants={itemVariants}>
             <h1 className="hero__title">
-              Hi, I'm <span className="gradient-text">Innocent Niyonzima</span>
+              I build backend systems that stay reliable in production.
             </h1>
           </motion.div>
           
@@ -54,8 +52,8 @@ export default function Hero() {
             className="hero__subtitle"
             variants={itemVariants}
           >
-            Backend Engineer focused on production systems, API reliability, and deployment workflows.
-            I own backend behavior in live environments, from incident debugging to stable releases on Linux infrastructure.
+            I work on backend APIs, deployments, and day-to-day reliability.  
+            That includes fixing issues in production, improving stability, and keeping services running well.
           </motion.p>
           
           <motion.div 
@@ -64,51 +62,12 @@ export default function Hero() {
           >
             <Link to="/projects" className="btn btn-primary">
               <FaRocket style={{ marginRight: 8 }} />
-              Explore My Work
+              View Projects
             </Link>
             <Link to="/contact" className="btn btn-secondary">
               <FaBolt style={{ marginRight: 8 }} />
-              Start a Project
+              Contact Me
             </Link>
-          </motion.div>
-          
-          <motion.div 
-            className="hero__stats"
-            variants={containerVariants}
-          >
-            <motion.div 
-              className="stat"
-              variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.05 }}
-            >
-              <div className="stat-icon-wrapper">
-                <FaUsers className="stat-icon" />
-              </div>
-              <div className="stat__number">72K+</div>
-              <div className="stat__label">Users Impacted</div>
-            </motion.div>
-            <motion.div 
-              className="stat"
-              variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.05 }}
-            >
-              <div className="stat-icon-wrapper">
-                <FaRocket className="stat-icon" />
-              </div>
-              <div className="stat__number">Live</div>
-              <div className="stat__label">Production Ownership</div>
-            </motion.div>
-            <motion.div 
-              className="stat"
-              variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.05 }}
-            >
-              <div className="stat-icon-wrapper">
-                <FaBolt className="stat-icon" />
-              </div>
-              <div className="stat__number">6+</div>
-              <div className="stat__label">Production Apps</div>
-            </motion.div>
           </motion.div>
         </motion.div>
       </div>

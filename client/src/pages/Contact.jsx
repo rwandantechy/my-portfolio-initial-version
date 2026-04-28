@@ -32,7 +32,7 @@ export default function Contact(){
       >
         <h2>Get In Touch</h2>
         <p className="muted" style={{ fontSize: '1.1rem', maxWidth: 600, margin: '24px auto 0' }}>
-          Open to backend engineering roles focused on production reliability, deployment, and operational ownership
+          I am open to backend engineering roles focused on reliability, deployment, and production support.
         </p>
       </motion.div>
 
@@ -64,7 +64,7 @@ export default function Contact(){
               <FaMapMarkerAlt className="contact-icon" />
               <div>
                 <h4>Location</h4>
-                <p className="muted">Available for Remote Work</p>
+                <p className="muted">Open to remote work</p>
               </div>
             </motion.div>
           </div>
@@ -170,7 +170,7 @@ export default function Contact(){
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                Message sent successfully! (This is a placeholder)
+                Message sent. This form is still connected to a placeholder action.
               </motion.p>
             )}
           </form>

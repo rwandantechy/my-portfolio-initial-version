@@ -29,7 +29,7 @@ export default function Footer(){
             <h3 className="gradient-text">Developer</h3>
             <p className="footer-description">
               Backend engineer focused on production systems, reliability, and deployment.
-              Building and operating APIs that stay stable in real environments.
+              I build and run APIs used in real environments.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export default function Footer(){
             <h4>Get In Touch</h4>
             <ul className="footer-contact">
               <li><FaEnvelope style={{ marginRight: 8 }} /> {CONTACT_EMAIL}</li>
-              <li><FaBriefcase style={{ marginRight: 8 }} /> Available for opportunities</li>
+              <li><FaBriefcase style={{ marginRight: 8 }} /> Open to opportunities</li>
             </ul>
           </div>
 

@@ -8,6 +8,7 @@ const routes = require('./routes');
 const { errorHandler } = require('./middlewares/errorHandler');
 const logger = require('./utils/logger');
 const { connectToDb } = require('./db/mongoClient');
+const { seedDefaultsIfEmpty } = require('./seed/seedDefaults');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -49,6 +50,7 @@ app.use(errorHandler);
 (async () => {
   try {
     await connectToDb();
+    await seedDefaultsIfEmpty();
     app.listen(PORT, () => {
       logger.info(`Server running on http://localhost:${PORT}`);
     });

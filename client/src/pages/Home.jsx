@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import Hero from '../components/Hero';
-import { detailedProjects } from '../data/detailedProjects';
 import { Link } from 'react-router-dom';
+import { useApp } from '../context/AppProvider';
 
 export default function Home(){
-  const featuredProjects = detailedProjects.filter(p => p.featured).slice(0, 3);
+  const { projects = [], loadingProjects } = useApp();
+  const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
   const [projectsRef, projectsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
@@ -23,9 +24,10 @@ export default function Home(){
           transition={{ duration: 0.5 }}
         >
           <h2>Featured Work</h2>
-          <p className="muted" style={{fontSize:'1.1rem'}}>Recent projects with measurable impact</p>
+          <p className="muted" style={{fontSize:'1.1rem'}}>A few projects I have worked on recently.</p>
         </motion.div>
         
+        {loadingProjects && <p className="muted">Loading projects...</p>}
         <div className="featured-projects-preview">
           {featuredProjects.map((project, idx) => (
             <motion.div 
@@ -72,12 +74,12 @@ export default function Home(){
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2 className="gradient-text">Let's Build Something Amazing Together</h2>
+            <h2 className="gradient-text">Want to work together?</h2>
             <p className="muted" style={{fontSize:'1.1rem',marginBottom:32}}>
-              Open to backend engineering roles focused on production systems, reliability, and deployment
+              I am open to backend engineering roles focused on production systems, reliability, and deployment.
             </p>
             <div style={{display:'flex',gap:16,justifyContent:'center',flexWrap:'wrap'}}>
-              <Link to="/contact" className="btn">Get In Touch</Link>
+              <Link to="/contact" className="btn">Send a Message</Link>
             </div>
           </div>
         </div>

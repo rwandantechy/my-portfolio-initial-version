@@ -30,3 +30,23 @@ exports.create = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.update = async (req, res, next) => {
+  try {
+    const updated = await blogsService.update(req.params.id, req.body);
+    if (!updated) return res.status(404).json({ message: 'Not found' });
+    res.json(updated);
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.remove = async (req, res, next) => {
+  try {
+    const deleted = await blogsService.remove(req.params.id);
+    if (!deleted) return res.status(404).json({ message: 'Not found' });
+    res.status(204).send();
+  } catch (err) {
+    next(err);
+  }
+};
